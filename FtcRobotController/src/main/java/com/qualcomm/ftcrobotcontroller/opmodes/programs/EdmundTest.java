@@ -5,7 +5,7 @@ package com.qualcomm.ftcrobotcontroller.opmodes.programs;
  */
 public class EdmundTest extends ProgramSkeleton{
     public void initProgram(){
-        movementLib.climb(0.4, 0.6);
+        movementLib.climb(0.4, 0.5);
     }
     public void loopProgram(){
 
