@@ -22,11 +22,11 @@ public class SampleCrappyTest extends OpMode {
         frmotor.setDirection(DcMotor.Direction.REVERSE);
         brmotor.setDirection(DcMotor.Direction.REVERSE);
         edmund.setDirection(DcMotor.Direction.REVERSE);
-        flmotor.setPower(0.5);
-        frmotor.setPower(0.5);
-        blmotor.setPower(0.5);
-        brmotor.setPower(0.5);
-        edmund.setPower(0.5);
+        flmotor.setPower(0.75);
+        frmotor.setPower(0.75);
+        blmotor.setPower(0.75);
+        brmotor.setPower(0.75);
+        edmund.setPower(0.75);
 
 
     }

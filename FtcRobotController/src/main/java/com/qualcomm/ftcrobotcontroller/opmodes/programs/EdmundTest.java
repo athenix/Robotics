@@ -11,14 +11,10 @@ public class EdmundTest extends ProgramSkeleton{
     public void runOpMode() throws InterruptedException {
 
         sensorLib = new SensorLib(hardwareMap);
-        telemetry.addData("Sensor Lib Passed","");
         movementLib = new MovementLib(hardwareMap);
-        telemetry.addData("Movement Lib Passed","");
         initProgram();
-        telemetry.addData("Init Passed", "");
         while (true) {
             loopProgram();
-            telemetry.addData("Loop Error","");
         }
     }
 
