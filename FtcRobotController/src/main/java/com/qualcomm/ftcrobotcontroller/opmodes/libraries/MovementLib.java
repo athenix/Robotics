@@ -30,11 +30,21 @@ public class MovementLib extends LibrarySkeleton {
         blmotor = hardwareMap.dcMotor.get("blmotor");
         brmotor = hardwareMap.dcMotor.get("brmotor");
         baseMotorsUsed = true;
+        try {
+            Thread.sleep(1000);
+        }catch(Exception e){
+
+        }
     }
 
     public void initEdmund() {
         edmund = hardwareMap.dcMotor.get("edmund");
         edmundUsed = true;
+        try {
+            Thread.sleep(1000);
+        }catch(Exception e){
+
+        }
     }
 
     public void moveFwd(double power) {

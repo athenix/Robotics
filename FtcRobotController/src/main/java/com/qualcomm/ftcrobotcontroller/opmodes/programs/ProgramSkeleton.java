@@ -11,12 +11,9 @@ public abstract class ProgramSkeleton extends LinearOpMode {
     SensorLib sensorLib;
     MovementLib movementLib;
 
-    public ProgramSkeleton() {
+    public void runOpMode() throws InterruptedException {
         sensorLib = new SensorLib(hardwareMap);
         movementLib = new MovementLib(hardwareMap);
-    }
-
-    public void runOpMode() throws InterruptedException {
         initProgram();
         while (true) {
             loopProgram();
