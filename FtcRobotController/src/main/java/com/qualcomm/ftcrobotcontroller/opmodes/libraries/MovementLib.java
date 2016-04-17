@@ -16,7 +16,6 @@ public class MovementLib extends LibrarySkeleton {
     DcMotor blmotor;
     DcMotor brmotor;
     DcMotor edmund; // front climber motor named after famous climber sir edmund hilary
-    HardwareMap hardwareMap;
     boolean baseMotorsUsed = false;
     boolean edmundUsed = false;
 
