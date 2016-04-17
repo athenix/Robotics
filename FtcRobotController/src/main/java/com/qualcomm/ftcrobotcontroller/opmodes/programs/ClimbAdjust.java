@@ -56,6 +56,7 @@ public class ClimbAdjust extends ProgramSkeleton{
         if(gamepad1.b&&(press=false)){
             b-=0.1;
             press = true;
+
             while(press){
             }
             press = false;
