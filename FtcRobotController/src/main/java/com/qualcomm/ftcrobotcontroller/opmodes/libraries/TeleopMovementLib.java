@@ -9,7 +9,7 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
  * Created by Sauhaarda on 4/11/2016.
  */
 
-public class MovementLib extends LibrarySkeleton {
+public class TeleopMovementLib extends LibrarySkeleton {
 
     DcMotor flmotor;
     DcMotor frmotor;
@@ -19,7 +19,7 @@ public class MovementLib extends LibrarySkeleton {
     boolean baseMotorsUsed = false;
     boolean edmundUsed = false;
 
-    public MovementLib(HardwareMap hardwareMap) {
+    public TeleopMovementLib(HardwareMap hardwareMap) {
         super(hardwareMap);
     }
 
@@ -51,8 +51,38 @@ public class MovementLib extends LibrarySkeleton {
             initBaseMotors();
         }
         flmotor.setPower(power);
-        frmotor.setPower(power);
         blmotor.setPower(power);
+        frmotor.setPower(power);
+        brmotor.setPower(power);
+    }
+
+    public void moveBwd(double power) {
+        if (!baseMotorsUsed) {
+            initBaseMotors();
+        }
+        flmotor.setPower(-power);
+        blmotor.setPower(-power);
+        frmotor.setPower(-power);
+        brmotor.setPower(-power);
+    }
+
+    public void turnRgt(double power) {
+        if (!baseMotorsUsed) {
+            initBaseMotors();
+        }
+        flmotor.setPower(power);
+        blmotor.setPower(power);
+        frmotor.setPower(-power);
+        brmotor.setPower(-power);
+    }
+
+    public void turnLft(double power) {
+        if (!baseMotorsUsed) {
+            initBaseMotors();
+        }
+        flmotor.setPower(-power);
+        blmotor.setPower(-power);
+        frmotor.setPower(power);
         brmotor.setPower(power);
     }
 

@@ -1,6 +1,7 @@
 package com.qualcomm.ftcrobotcontroller.opmodes;
 
 import com.qualcomm.ftcrobotcontroller.opmodes.programs.EdmundTest;
+import com.qualcomm.ftcrobotcontroller.opmodes.programs.Teleop;
 import com.qualcomm.robotcore.eventloop.opmode.OpModeManager;
 import com.qualcomm.robotcore.eventloop.opmode.OpModeRegister;
 
@@ -10,5 +11,6 @@ import com.qualcomm.robotcore.eventloop.opmode.OpModeRegister;
 public class FtcOpModeRegister implements OpModeRegister {
     public void register(OpModeManager manager) {
         manager.register("EdmundTest", EdmundTest.class);
+        manager.register("Teleop",Teleop.class);
     }
 }
