@@ -9,7 +9,6 @@ import com.qualcomm.ftcrobotcontroller.opmodes.libraries.SensorLib;
 public class EdmundTest extends ProgramSkeleton{
 
     public void runOpMode() throws InterruptedException {
-
         sensorLib = new SensorLib(hardwareMap);
         movementLib = new MovementLib(hardwareMap);
         initProgram();
