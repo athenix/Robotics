@@ -15,7 +15,7 @@ public class LogTest extends ProgramSkeleton {
 
         try{
             Writer output = null;
-            File file = new File("mnt/sdcard/DCIM/log.txt");
+            File file = new File("/sdcard/DCIM/log.txt");
             output = new BufferedWriter(new FileWriter(file));
 
             output.close();
