@@ -1,5 +1,6 @@
 package com.qualcomm.ftcrobotcontroller.opmodes.programs;
 
+import com.qualcomm.ftcrobotcontroller.opmodes.libraries.ActuatorLib;
 import com.qualcomm.ftcrobotcontroller.opmodes.libraries.TeleopMovementLib;
 import com.qualcomm.ftcrobotcontroller.opmodes.libraries.SensorLib;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
@@ -10,10 +11,12 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 public abstract class ProgramSkeleton extends LinearOpMode {
     SensorLib sensorLib;
     TeleopMovementLib teleopMovementLib;
+    ActuatorLib actuatorLib;
 
     public void runOpMode() throws InterruptedException {
         sensorLib = new SensorLib(hardwareMap);
         teleopMovementLib = new TeleopMovementLib(hardwareMap);
+        actuatorLib = new ActuatorLib(hardwareMap);
         initProgram();
         while (true) {
             loopProgram();

@@ -15,8 +15,8 @@ public class Teleop extends ProgramSkeleton {
         movementManagement();
     }
 
-    boolean press = false;
     double movePower = 0.5, climbPower = 0.5;
+    boolean press = false;
 
     public void powerManagement() {
         if (gamepad1.y && (!press)) {
