@@ -15,7 +15,7 @@ public class TeleopMovementLib extends LibrarySkeleton {
     DcMotor frmotor;
     DcMotor blmotor;
     DcMotor brmotor;
-    DcMotor edmund; // front climber motor named after famous climber sir edmund hilary
+    DcMotor edmund; // front climber motor named after famous climber sir edmund hillary
     boolean baseMotorsUsed = false;
     boolean edmundUsed = false;
 

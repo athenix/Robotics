@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
 /**
- * Created by Vicky on 3/26/2016.
+ * Created by Steven on 3/26/2016.
  */
 public class MotorTest extends LinearOpMode {
     public void runOpMode() {

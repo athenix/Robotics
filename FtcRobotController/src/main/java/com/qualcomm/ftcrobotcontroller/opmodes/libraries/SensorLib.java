@@ -11,9 +11,11 @@ public class SensorLib extends LibrarySkeleton {
 
     TouchSensor touch;
     GyroSensor sensorGyro;
+    int heading = 0;
     HardwareMap hardwareMap;
 
     boolean touchUsed;
+    boolean gyroUsed;
 
     public SensorLib(HardwareMap hardwareMap) {
         super(hardwareMap);
@@ -23,11 +25,46 @@ public class SensorLib extends LibrarySkeleton {
         hardwareMap.touchSensor.get("touch");
     }
 
+    public void initGyro() {
+        sensorGyro = hardwareMap.gyroSensor.get("gyro");
+        calibrateGyro();
+    }
+
+    public void calibrateGyro() {
+        if (!gyroUsed) {
+            gyroUsed = true;
+            initGyro();
+            return;
+        }
+        //calibrate the gyro
+        sensorGyro.calibrate();
+
+        //make sure the gyro is calibrated
+        while (sensorGyro.isCalibrating()) {
+            try {
+                Thread.sleep(50);
+            } catch (Exception e) {
+
+            }
+
+        }
+    }
+
     public boolean touched() {
-        if (!touchUsed)
+        if (!touchUsed) {
+            touchUsed = true;
             initTouch();
+        }
 
         return touch.isPressed();
+    }
+
+    public int getGyroPosition() {
+        if (!gyroUsed) {
+            gyroUsed = true;
+            initGyro();
+        }
+        return sensorGyro.getHeading();
     }
 
 }
