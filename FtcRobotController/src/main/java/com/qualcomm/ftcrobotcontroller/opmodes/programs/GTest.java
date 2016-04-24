@@ -10,7 +10,7 @@ import com.qualcomm.robotcore.hardware.Servo;
 public class GTest extends ProgramSkeleton {
     public void initProgram() {
         sensorLib.calibrateGyro();
-        actuatorLib.turnPedestal(45);
+        actuatorLib.turnPedestal(45);//random eit
     }
 
     public void loopProgram() {
