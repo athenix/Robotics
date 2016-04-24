@@ -7,10 +7,7 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
  */
 public abstract class LibrarySkeleton {
     HardwareMap hardwareMap;
-
     public LibrarySkeleton(HardwareMap hardwareMap) {
         this.hardwareMap = hardwareMap;
     }
-
-
 }
